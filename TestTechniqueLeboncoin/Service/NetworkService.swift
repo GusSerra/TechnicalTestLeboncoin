@@ -15,8 +15,6 @@ enum NetworkError: Error {
 
 struct Resource<T> {
     let baseUrl: String
-    let parameters: [String: String]
-    let method: String = "GET"
     let parse: (Data) -> T?
 }
 
@@ -30,13 +28,7 @@ final class NetworkService {
         
         dataTask?.cancel()
         
-        if var urlComponents = URLComponents(string: resource.baseUrl) {
-            
-            var queryItems = [URLQueryItem]()
-            for parameter in resource.parameters {
-                queryItems.append(URLQueryItem(name: parameter.key, value: parameter.value))
-            }
-            urlComponents.queryItems = queryItems
+        if let urlComponents = URLComponents(string: resource.baseUrl) {
             
             guard let url = urlComponents.url else {
                 completion(.failure(.URLError))

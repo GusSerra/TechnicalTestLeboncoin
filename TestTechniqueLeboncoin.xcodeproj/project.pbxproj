@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */; };
 		ECFAC8ED27C13F1200BADB47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */; };
-		ECFAC8EF27C13F1200BADB47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EE27C13F1200BADB47 /* ViewController.swift */; };
 		ECFAC8F227C13F1200BADB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F027C13F1200BADB47 /* Main.storyboard */; };
 		ECFAC8F427C13F1500BADB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F327C13F1500BADB47 /* Assets.xcassets */; };
 		ECFAC8F727C13F1500BADB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F527C13F1500BADB47 /* LaunchScreen.storyboard */; };
 		ECFAC90027C1570500BADB47 /* Announce.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8FF27C1570500BADB47 /* Announce.swift */; };
 		ECFAC90227C1599000BADB47 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90127C1599000BADB47 /* Category.swift */; };
 		ECFAC90527C15C5B00BADB47 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90427C15C5B00BADB47 /* NetworkService.swift */; };
+		ECFAC90927C15DBD00BADB47 /* AnnounceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */; };
+		ECFAC90B27C15EDB00BADB47 /* AnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */; };
+		ECFAC90D27C165EA00BADB47 /* AnnounceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECFAC8E727C13F1200BADB47 /* TestTechniqueLeboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTechniqueLeboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECFAC8EE27C13F1200BADB47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECFAC8F127C13F1200BADB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECFAC8F327C13F1500BADB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECFAC8F627C13F1500BADB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,9 @@
 		ECFAC8FF27C1570500BADB47 /* Announce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announce.swift; sourceTree = "<group>"; };
 		ECFAC90127C1599000BADB47 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		ECFAC90427C15C5B00BADB47 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceListViewModel.swift; sourceTree = "<group>"; };
+		ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewModel.swift; sourceTree = "<group>"; };
+		ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +66,11 @@
 		ECFAC8E927C13F1200BADB47 /* TestTechniqueLeboncoin */ = {
 			isa = PBXGroup;
 			children = (
+				ECFAC90627C15D3C00BADB47 /* Screen */,
 				ECFAC90327C15A1400BADB47 /* Service */,
 				ECFAC8FE27C156B700BADB47 /* Model */,
 				ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */,
 				ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */,
-				ECFAC8EE27C13F1200BADB47 /* ViewController.swift */,
 				ECFAC8F027C13F1200BADB47 /* Main.storyboard */,
 				ECFAC8F327C13F1500BADB47 /* Assets.xcassets */,
 				ECFAC8F527C13F1500BADB47 /* LaunchScreen.storyboard */,
@@ -90,6 +94,24 @@
 				ECFAC90427C15C5B00BADB47 /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		ECFAC90627C15D3C00BADB47 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				ECFAC90727C15D4B00BADB47 /* Announce */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		ECFAC90727C15D4B00BADB47 /* Announce */ = {
+			isa = PBXGroup;
+			children = (
+				ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */,
+				ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */,
+				ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */,
+			);
+			path = Announce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +187,12 @@
 			files = (
 				ECFAC90027C1570500BADB47 /* Announce.swift in Sources */,
 				ECFAC90227C1599000BADB47 /* Category.swift in Sources */,
-				ECFAC8EF27C13F1200BADB47 /* ViewController.swift in Sources */,
 				ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */,
 				ECFAC90527C15C5B00BADB47 /* NetworkService.swift in Sources */,
+				ECFAC90B27C15EDB00BADB47 /* AnnounceViewModel.swift in Sources */,
 				ECFAC8ED27C13F1200BADB47 /* SceneDelegate.swift in Sources */,
+				ECFAC90D27C165EA00BADB47 /* AnnounceListViewController.swift in Sources */,
+				ECFAC90927C15DBD00BADB47 /* AnnounceListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

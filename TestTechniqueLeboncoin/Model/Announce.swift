@@ -19,7 +19,7 @@ struct Announce: Codable {
     let siret: String?
 }
 
-enum Image: String, Codable {
-    case small
-    case thumb
+struct Image: Codable {
+    let small: String?
+    let thumb: String?
 }
