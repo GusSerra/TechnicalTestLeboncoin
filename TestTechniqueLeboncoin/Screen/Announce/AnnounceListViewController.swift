@@ -17,6 +17,16 @@ class AnnounceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
+        
         viewModel.fetchAnnounces()
+    }
+}
+
+extension AnnounceListViewController: AnnounceListDelegate {
+    
+    func announcesDidFetch(_ announceListViewModel: AnnounceListViewModel) {
+        let test = viewModel.announcesConfiguration
+        print(test)
     }
 }

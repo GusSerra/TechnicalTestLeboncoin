@@ -7,13 +7,30 @@
 
 import Foundation
 
-struct AnnounceListViewModel {
+protocol AnnounceListDelegate: AnyObject {
+    func announcesDidFetch(_ announceListViewModel: AnnounceListViewModel)
+}
+
+class AnnounceListViewModel {
     
-    private var announces = [Announce]()
+    private var announces: [Announce] = [] {
+        didSet {
+            self.delegate?.announcesDidFetch(self)
+        }
+    }
     
     var announcesConfiguration: [AnnounceViewModel] {
-        announces.map { AnnounceViewModel(announce: $0) }
+        announces.sorted { announceA, announceB in
+            guard announceA.is_urgent == announceB.is_urgent else {
+                return announceA.is_urgent
+            }
+            
+            return announceA.creation_date < announceB.creation_date
+        }
+        .map { AnnounceViewModel(announce: $0) }
     }
+    
+    weak var delegate: AnnounceListDelegate?
     
     func fetchAnnounces() {
         
@@ -22,14 +39,14 @@ struct AnnounceListViewModel {
             return try? JSONDecoder().decode([Announce].self, from: data)
         }
         
-        NetworkService().load(resource: resource) { result in
+        NetworkService().load(resource: resource) { [weak self] result in
             
             switch result {
                 case .failure(let error):
                     print(error)
                 case .success(let announces):
                     if let safeAnnounces = announces {
-                        print(safeAnnounces)
+                        self?.announces = safeAnnounces
                     }
             }
         }
