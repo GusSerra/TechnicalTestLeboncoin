@@ -13,6 +13,9 @@ class AnnounceListViewController: UIViewController {
     }
     
     @IBOutlet weak var announceCollectionView: UICollectionView!
+    @IBOutlet weak var categoryMenuView: UIView!
+    @IBOutlet weak var displayedCategoryLabel: UILabel!
+    @IBOutlet weak var categoriesButton: UIButton!
     
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
@@ -25,6 +28,8 @@ class AnnounceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        
         setUpCollectionView()
         
         viewModel.delegate = self
@@ -32,9 +37,28 @@ class AnnounceListViewController: UIViewController {
         viewModel.fetchAnnounces()
     }
     
+    private func setupUI() {
+        self.categoryMenuView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        self.categoryMenuView.layer.borderWidth = 1.0
+        self.categoryMenuView.layer.cornerRadius = self.categoryMenuView.frame.height / 2
+        self.displayedCategoryLabel.text = "Toutes les catégories"
+        self.categoriesButton.setTitle("Catégories", for: .normal)
+    }
+    
     private func setUpCollectionView() {
         announceCollectionView.contentInsetAdjustmentBehavior = .always
         announceCollectionView.register(UINib(nibName: "AnnounceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnnounceCell")
+    }
+    
+    @IBAction func categoriesButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueToCategories", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToCategories" {
+            let categoriesVC = segue.destination as! CategoryViewController
+            categoriesVC.announceListViewModel = viewModel
+        }
     }
 }
 
@@ -84,7 +108,7 @@ extension AnnounceListViewController: UICollectionViewDelegateFlowLayout {
 
 extension AnnounceListViewController: AnnounceListDelegate {
     
-    func announcesDidFetch(_ announceListViewModel: AnnounceListViewModel) {
+    func announcesConfigDidFetch(_ announceListViewModel: AnnounceListViewModel) {
         announceCollectionView.reloadData()
     }
 }

@@ -8,14 +8,20 @@
 import Foundation
 
 protocol AnnounceListDelegate: AnyObject {
-    func announcesDidFetch(_ announceListViewModel: AnnounceListViewModel)
+    func announcesConfigDidFetch(_ announceListViewModel: AnnounceListViewModel)
 }
 
 class AnnounceListViewModel {
     
     private var announces: [Announce] = [] {
         didSet {
-            self.delegate?.announcesDidFetch(self)
+            self.fetchCategories()
+        }
+    }
+    
+    var categories: [Category] = [] {
+        didSet {
+            self.delegate?.announcesConfigDidFetch(self)
         }
     }
     
@@ -27,7 +33,12 @@ class AnnounceListViewModel {
             
             return announceA.creation_date < announceB.creation_date
         }
-        .map { AnnounceViewModel(announce: $0) }
+        .map { announce in
+            guard let announceCategory = categories.first(where: { $0.id == announce.category_id }) else {
+                fatalError("there is no category for the cetegory announce id")
+            }
+            return AnnounceViewModel(announce: announce, category: announceCategory)
+        }
     }
     
     weak var delegate: AnnounceListDelegate?
@@ -47,6 +58,26 @@ class AnnounceListViewModel {
                 case .success(let announces):
                     if let safeAnnounces = announces {
                         self?.announces = safeAnnounces
+                    }
+            }
+        }
+    }
+    
+    private func fetchCategories() {
+        
+        let resource = Resource<[Category]>(baseUrl: "https://raw.githubusercontent.com/leboncoin/paperclip/master/categories.json") { data in
+            
+            return try? JSONDecoder().decode([Category].self, from: data)
+        }
+        
+        NetworkService().load(resource: resource) { [weak self] result in
+            
+            switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let categories):
+                    if let safeCategories = categories {
+                        self?.categories = safeCategories
                     }
             }
         }

@@ -15,6 +15,7 @@ enum UrgentAnnounce {
 struct AnnounceViewModel {
     let id: Int
     let title: String
+    let category: Category
     let creationDate: Date?
     let description: String
     let urgency: UrgentAnnounce
@@ -23,9 +24,10 @@ struct AnnounceViewModel {
     let price: Double
     var siret: String?
     
-    init(announce: Announce) {
+    init(announce: Announce, category: Category) {
         self.id = announce.id
         self.title = announce.title
+        self.category = category
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
         self.creationDate = dateFormatter.date(from: announce.creation_date)

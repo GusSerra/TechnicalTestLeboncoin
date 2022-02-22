@@ -20,6 +20,7 @@ class AnnounceCollectionViewCell: UICollectionViewCell {
         self.announceImageView.loadImage(from: announceViewModel.thumbURL)
         self.announceTitleLabel.text = announceViewModel.title
         self.announcePriceLabel.text = announceViewModel.displayedPrice
+        self.announceCategoryLabel.text = announceViewModel.category.name
         self.announceUrgencyIndicateur.isHidden = announceViewModel.urgency == .urgent ? false : true
     }
 }
