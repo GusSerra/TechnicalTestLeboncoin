@@ -18,6 +18,9 @@
 		ECFAC90927C15DBD00BADB47 /* AnnounceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */; };
 		ECFAC90B27C15EDB00BADB47 /* AnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */; };
 		ECFAC90D27C165EA00BADB47 /* AnnounceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */; };
+		ECFAC91127C434D200BADB47 /* AnnounceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90F27C434D200BADB47 /* AnnounceCollectionViewCell.swift */; };
+		ECFAC91227C434D200BADB47 /* AnnounceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC91027C434D200BADB47 /* AnnounceCollectionViewCell.xib */; };
+		ECFAC91527C43B3D00BADB47 /* UIKit + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC91427C43B3D00BADB47 /* UIKit + Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceListViewModel.swift; sourceTree = "<group>"; };
 		ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewModel.swift; sourceTree = "<group>"; };
 		ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceListViewController.swift; sourceTree = "<group>"; };
+		ECFAC90F27C434D200BADB47 /* AnnounceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECFAC91027C434D200BADB47 /* AnnounceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceCollectionViewCell.xib; sourceTree = "<group>"; };
+		ECFAC91427C43B3D00BADB47 /* UIKit + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		ECFAC8E927C13F1200BADB47 /* TestTechniqueLeboncoin */ = {
 			isa = PBXGroup;
 			children = (
+				ECFAC91327C43B1D00BADB47 /* Extention */,
+				ECFAC90E27C434A800BADB47 /* View */,
 				ECFAC90627C15D3C00BADB47 /* Screen */,
 				ECFAC90327C15A1400BADB47 /* Service */,
 				ECFAC8FE27C156B700BADB47 /* Model */,
@@ -112,6 +120,23 @@
 				ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */,
 			);
 			path = Announce;
+			sourceTree = "<group>";
+		};
+		ECFAC90E27C434A800BADB47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECFAC90F27C434D200BADB47 /* AnnounceCollectionViewCell.swift */,
+				ECFAC91027C434D200BADB47 /* AnnounceCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECFAC91327C43B1D00BADB47 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				ECFAC91427C43B3D00BADB47 /* UIKit + Extention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFAC8F727C13F1500BADB47 /* LaunchScreen.storyboard in Resources */,
+				ECFAC91227C434D200BADB47 /* AnnounceCollectionViewCell.xib in Resources */,
 				ECFAC8F427C13F1500BADB47 /* Assets.xcassets in Resources */,
 				ECFAC8F227C13F1200BADB47 /* Main.storyboard in Resources */,
 			);
@@ -187,10 +213,12 @@
 			files = (
 				ECFAC90027C1570500BADB47 /* Announce.swift in Sources */,
 				ECFAC90227C1599000BADB47 /* Category.swift in Sources */,
+				ECFAC91127C434D200BADB47 /* AnnounceCollectionViewCell.swift in Sources */,
 				ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */,
 				ECFAC90527C15C5B00BADB47 /* NetworkService.swift in Sources */,
 				ECFAC90B27C15EDB00BADB47 /* AnnounceViewModel.swift in Sources */,
 				ECFAC8ED27C13F1200BADB47 /* SceneDelegate.swift in Sources */,
+				ECFAC91527C43B3D00BADB47 /* UIKit + Extention.swift in Sources */,
 				ECFAC90D27C165EA00BADB47 /* AnnounceListViewController.swift in Sources */,
 				ECFAC90927C15DBD00BADB47 /* AnnounceListViewModel.swift in Sources */,
 			);

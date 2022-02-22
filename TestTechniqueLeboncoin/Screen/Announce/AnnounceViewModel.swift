@@ -18,7 +18,8 @@ struct AnnounceViewModel {
     let creationDate: Date?
     let description: String
     let urgency: UrgentAnnounce
-    let imagesUrl: Image
+    let thumbURL: URL?
+    let smallURL: URL?
     let price: Double
     var siret: String?
     
@@ -30,7 +31,12 @@ struct AnnounceViewModel {
         self.creationDate = dateFormatter.date(from: announce.creation_date)
         self.description = announce.description
         self.urgency = announce.is_urgent ? .urgent : .noturgent
-        self.imagesUrl = announce.images_url
+        self.thumbURL = URL(string: announce.images_url.thumb ?? "")
+        self.smallURL = URL(string: announce.images_url.small ?? "")
         self.price = announce.price
+    }
+    
+    var displayedPrice: String {
+        "\(price) €"
     }
 }
