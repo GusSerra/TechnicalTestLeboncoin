@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CategoryDelegate: AnyObject {
+    func categoryDidSelect(_ categoryListViewModel: CategoryListViewModel)
+}
+
 class CategoryViewController: UIViewController {
     
     
@@ -19,6 +23,8 @@ class CategoryViewController: UIViewController {
     }()
     
     var announceListViewModel: AnnounceListViewModel?
+    
+    weak var delegate: CategoryDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +55,16 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = categoryViewModel.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let categoryViewModel = viewModel.categoriesConfiguration[indexPath.row]
+        
+        viewModel.userSelecetdCategory(with: categoryViewModel.id)
+        
+        delegate?.categoryDidSelect(viewModel)
+        
+        dismiss(animated: true)
     }
 }

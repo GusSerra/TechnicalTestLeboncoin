@@ -25,8 +25,17 @@ class AnnounceListViewModel {
         }
     }
     
+    var filteredCategory: Category?
+    
     var announcesConfiguration: [AnnounceViewModel] {
-        announces.sorted { announceA, announceB in
+        announces
+        .filter { announce in
+            guard let category = filteredCategory else {
+                return true
+            }
+            return announce.category_id == category.id
+        }
+        .sorted { announceA, announceB in
             guard announceA.is_urgent == announceB.is_urgent else {
                 return announceA.is_urgent
             }

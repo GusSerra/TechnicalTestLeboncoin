@@ -45,6 +45,10 @@ class AnnounceListViewController: UIViewController {
         self.categoriesButton.setTitle("Catégories", for: .normal)
     }
     
+    private func updateUI() {
+        self.displayedCategoryLabel.text = viewModel.filteredCategory != nil ? viewModel.filteredCategory?.name : "Toutes les catégories"
+    }
+    
     private func setUpCollectionView() {
         announceCollectionView.contentInsetAdjustmentBehavior = .always
         announceCollectionView.register(UINib(nibName: "AnnounceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnnounceCell")
@@ -57,6 +61,7 @@ class AnnounceListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToCategories" {
             let categoriesVC = segue.destination as! CategoryViewController
+            categoriesVC.delegate = self
             categoriesVC.announceListViewModel = viewModel
         }
     }
@@ -109,6 +114,15 @@ extension AnnounceListViewController: UICollectionViewDelegateFlowLayout {
 extension AnnounceListViewController: AnnounceListDelegate {
     
     func announcesConfigDidFetch(_ announceListViewModel: AnnounceListViewModel) {
+        announceCollectionView.reloadData()
+    }
+}
+
+extension AnnounceListViewController: CategoryDelegate {
+    
+    func categoryDidSelect(_ categoryListViewModel: CategoryListViewModel) {
+        viewModel.filteredCategory = categoryListViewModel.selectedCategory
+        updateUI()
         announceCollectionView.reloadData()
     }
 }

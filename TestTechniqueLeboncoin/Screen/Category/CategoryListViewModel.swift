@@ -16,9 +16,18 @@ class CategoryListViewModel {
             .map { CategoryViewModel(category: $0) }
     }
     
-    private var selectedCategory: Category?
+    var selectedCategory: Category?
     
     func loadCategories(from announceListViewModel: AnnounceListViewModel) {
         self.categories = announceListViewModel.categories
+    }
+    
+    func userSelecetdCategory(with id: Int64) {
+        
+        guard let category = categories.first(where: { $0.id == id }) else {
+            fatalError("the id of the category is invalid")
+        }
+        
+        selectedCategory = category
     }
 }
