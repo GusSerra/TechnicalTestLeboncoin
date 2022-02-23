@@ -17,7 +17,7 @@ class AnnounceCollectionViewCell: UICollectionViewCell {
     
     func configure(_ announceViewModel: AnnounceViewModel) {
         self.announceImageView.image = UIImage(named: "no-image")
-        self.announceImageView.loadImage(from: announceViewModel.thumbURL)
+        self.announceImageView.loadImage(from: announceViewModel.smallURL)
         self.announceTitleLabel.text = announceViewModel.title
         self.announcePriceLabel.text = announceViewModel.displayedPrice
         self.announceCategoryLabel.text = announceViewModel.category.name

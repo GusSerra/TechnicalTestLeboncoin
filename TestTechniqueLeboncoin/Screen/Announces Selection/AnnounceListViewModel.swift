@@ -40,7 +40,7 @@ class AnnounceListViewModel {
                 return announceA.is_urgent
             }
             
-            return announceA.creation_date < announceB.creation_date
+            return announceA.creation_date > announceB.creation_date
         }
         .map { announce in
             guard let announceCategory = categories.first(where: { $0.id == announce.category_id }) else {

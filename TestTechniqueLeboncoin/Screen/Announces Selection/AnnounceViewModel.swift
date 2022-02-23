@@ -22,7 +22,7 @@ struct AnnounceViewModel {
     let thumbURL: URL?
     let smallURL: URL?
     let price: Double
-    var siret: String?
+    let siret: String?
     
     init(announce: Announce, category: Category) {
         self.id = announce.id
@@ -36,9 +36,27 @@ struct AnnounceViewModel {
         self.thumbURL = URL(string: announce.images_url.thumb ?? "")
         self.smallURL = URL(string: announce.images_url.small ?? "")
         self.price = announce.price
+        self.siret = announce.siret
     }
     
     var displayedPrice: String {
         "\(price) €"
+    }
+    
+    var displayedDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YY"
+        guard let safeCreationDate = creationDate else {
+            return "Date de la création unconnu"
+        }
+        let stringData = dateFormatter.string(from: safeCreationDate)
+        return "Créé le \(stringData)"
+    }
+    
+    var displayedUser: String {
+        guard let safeSiret = siret else {
+            return "Créé par un utilisateur"
+        }
+        return "Créé par la société siret : \(safeSiret)"
     }
 }

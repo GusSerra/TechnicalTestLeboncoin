@@ -38,6 +38,7 @@ class AnnounceListViewController: UIViewController {
     }
     
     private func setupUI() {
+        self.title = "Announces"
         self.categoryMenuView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.categoryMenuView.layer.borderWidth = 1.0
         self.categoryMenuView.layer.cornerRadius = self.categoryMenuView.frame.height / 2
@@ -63,6 +64,12 @@ class AnnounceListViewController: UIViewController {
             let categoriesVC = segue.destination as! CategoryViewController
             categoriesVC.delegate = self
             categoriesVC.announceListViewModel = viewModel
+        } else if segue.identifier == "segueToAnnounce" {
+            let announceVC = segue.destination as! AnnounceViewController
+            guard let selectedIndexPathRow = announceCollectionView.indexPathsForSelectedItems?.first?.row else {
+                fatalError("selected indexpath is invalid")
+            }
+            announceVC.announceViewModel = viewModel.announcesConfiguration[selectedIndexPathRow]
         }
     }
 }
@@ -86,6 +93,10 @@ extension AnnounceListViewController: UICollectionViewDataSource, UICollectionVi
         cell.configure(announceViewModel)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueToAnnounce", sender: self)
     }
 }
 

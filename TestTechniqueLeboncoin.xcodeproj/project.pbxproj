@@ -10,6 +10,7 @@
 		ECEF232027C5743B000ABC75 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF231F27C5743B000ABC75 /* CategoryViewModel.swift */; };
 		ECEF232227C5749D000ABC75 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232127C5749D000ABC75 /* CategoryListViewModel.swift */; };
 		ECEF232527C58259000ABC75 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232427C58259000ABC75 /* CategoryViewController.swift */; };
+		ECEF232827C6C95C000ABC75 /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232727C6C95C000ABC75 /* AnnounceViewController.swift */; };
 		ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */; };
 		ECFAC8ED27C13F1200BADB47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */; };
 		ECFAC8F227C13F1200BADB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F027C13F1200BADB47 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		ECEF231F27C5743B000ABC75 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		ECEF232127C5749D000ABC75 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
 		ECEF232427C58259000ABC75 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		ECEF232727C6C95C000ABC75 /* AnnounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
 		ECFAC8E727C13F1200BADB47 /* TestTechniqueLeboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTechniqueLeboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,14 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ECEF232327C581DE000ABC75 /* Category */ = {
+		ECEF232327C581DE000ABC75 /* Categories Filter */ = {
 			isa = PBXGroup;
 			children = (
 				ECEF232427C58259000ABC75 /* CategoryViewController.swift */,
 				ECEF232127C5749D000ABC75 /* CategoryListViewModel.swift */,
 				ECEF231F27C5743B000ABC75 /* CategoryViewModel.swift */,
 			);
-			path = Category;
+			path = "Categories Filter";
+			sourceTree = "<group>";
+		};
+		ECEF232627C6C918000ABC75 /* Announce Details */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF232727C6C95C000ABC75 /* AnnounceViewController.swift */,
+			);
+			path = "Announce Details";
 			sourceTree = "<group>";
 		};
 		ECFAC8DE27C13F1200BADB47 = {
@@ -122,20 +132,21 @@
 		ECFAC90627C15D3C00BADB47 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				ECFAC90727C15D4B00BADB47 /* Announce */,
-				ECEF232327C581DE000ABC75 /* Category */,
+				ECFAC90727C15D4B00BADB47 /* Announces Selection */,
+				ECEF232327C581DE000ABC75 /* Categories Filter */,
+				ECEF232627C6C918000ABC75 /* Announce Details */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		ECFAC90727C15D4B00BADB47 /* Announce */ = {
+		ECFAC90727C15D4B00BADB47 /* Announces Selection */ = {
 			isa = PBXGroup;
 			children = (
 				ECFAC90C27C165EA00BADB47 /* AnnounceListViewController.swift */,
 				ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */,
 				ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */,
 			);
-			path = Announce;
+			path = "Announces Selection";
 			sourceTree = "<group>";
 		};
 		ECFAC90E27C434A800BADB47 /* View */ = {
@@ -231,6 +242,7 @@
 				ECFAC90027C1570500BADB47 /* Announce.swift in Sources */,
 				ECFAC90227C1599000BADB47 /* Category.swift in Sources */,
 				ECFAC91127C434D200BADB47 /* AnnounceCollectionViewCell.swift in Sources */,
+				ECEF232827C6C95C000ABC75 /* AnnounceViewController.swift in Sources */,
 				ECEF232027C5743B000ABC75 /* CategoryViewModel.swift in Sources */,
 				ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */,
 				ECFAC90527C15C5B00BADB47 /* NetworkService.swift in Sources */,
