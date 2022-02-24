@@ -9,14 +9,14 @@ import Foundation
 
 class CategoryListViewModel {
     
-    private var categories: [Category] = []
+    private var categories: [AnnounceCategory] = []
     
     var categoriesConfiguration: [CategoryViewModel] {
         categories.sorted(by: { $0.name < $1.name })
             .map { CategoryViewModel(category: $0) }
     }
     
-    var selectedCategory: Category?
+    var selectedCategory: AnnounceCategory?
     
     func loadCategories(from announceListViewModel: AnnounceListViewModel) {
         self.categories = announceListViewModel.categories

@@ -11,13 +11,18 @@
 		ECEF232227C5749D000ABC75 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232127C5749D000ABC75 /* CategoryListViewModel.swift */; };
 		ECEF232527C58259000ABC75 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232427C58259000ABC75 /* CategoryViewController.swift */; };
 		ECEF232827C6C95C000ABC75 /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF232727C6C95C000ABC75 /* AnnounceViewController.swift */; };
+		ECEF233127C81DEA000ABC75 /* TestTechniqueLeboncoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF233027C81DEA000ABC75 /* TestTechniqueLeboncoinTests.swift */; };
+		ECEF233C27C82B63000ABC75 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF233B27C82B63000ABC75 /* MockNetworkService.swift */; };
+		ECEF233E27C82C6F000ABC75 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF233D27C82C6F000ABC75 /* MockData.swift */; };
+		ECEF234127C8325D000ABC75 /* announces.json in Resources */ = {isa = PBXBuildFile; fileRef = ECEF233F27C83028000ABC75 /* announces.json */; };
+		ECEF234327C832FB000ABC75 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = ECEF234227C832FB000ABC75 /* categories.json */; };
 		ECFAC8EB27C13F1200BADB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */; };
 		ECFAC8ED27C13F1200BADB47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */; };
 		ECFAC8F227C13F1200BADB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F027C13F1200BADB47 /* Main.storyboard */; };
 		ECFAC8F427C13F1500BADB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F327C13F1500BADB47 /* Assets.xcassets */; };
 		ECFAC8F727C13F1500BADB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFAC8F527C13F1500BADB47 /* LaunchScreen.storyboard */; };
 		ECFAC90027C1570500BADB47 /* Announce.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC8FF27C1570500BADB47 /* Announce.swift */; };
-		ECFAC90227C1599000BADB47 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90127C1599000BADB47 /* Category.swift */; };
+		ECFAC90227C1599000BADB47 /* AnnounceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90127C1599000BADB47 /* AnnounceCategory.swift */; };
 		ECFAC90527C15C5B00BADB47 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90427C15C5B00BADB47 /* NetworkService.swift */; };
 		ECFAC90927C15DBD00BADB47 /* AnnounceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */; };
 		ECFAC90B27C15EDB00BADB47 /* AnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */; };
@@ -27,11 +32,27 @@
 		ECFAC91527C43B3D00BADB47 /* UIKit + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC91427C43B3D00BADB47 /* UIKit + Extention.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ECEF233227C81DEA000ABC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECFAC8DF27C13F1200BADB47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECFAC8E627C13F1200BADB47;
+			remoteInfo = TestTechniqueLeboncoin;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		ECEF231F27C5743B000ABC75 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		ECEF232127C5749D000ABC75 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
 		ECEF232427C58259000ABC75 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		ECEF232727C6C95C000ABC75 /* AnnounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
+		ECEF232E27C81DE9000ABC75 /* TestTechniqueLeboncoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTechniqueLeboncoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECEF233027C81DEA000ABC75 /* TestTechniqueLeboncoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTechniqueLeboncoinTests.swift; sourceTree = "<group>"; };
+		ECEF233B27C82B63000ABC75 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		ECEF233D27C82C6F000ABC75 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		ECEF233F27C83028000ABC75 /* announces.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = announces.json; sourceTree = "<group>"; };
+		ECEF234227C832FB000ABC75 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		ECFAC8E727C13F1200BADB47 /* TestTechniqueLeboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTechniqueLeboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFAC8EA27C13F1200BADB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +61,7 @@
 		ECFAC8F627C13F1500BADB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECFAC8F827C13F1500BADB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECFAC8FF27C1570500BADB47 /* Announce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announce.swift; sourceTree = "<group>"; };
-		ECFAC90127C1599000BADB47 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		ECFAC90127C1599000BADB47 /* AnnounceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceCategory.swift; sourceTree = "<group>"; };
 		ECFAC90427C15C5B00BADB47 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		ECFAC90827C15DBD00BADB47 /* AnnounceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceListViewModel.swift; sourceTree = "<group>"; };
 		ECFAC90A27C15EDB00BADB47 /* AnnounceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewModel.swift; sourceTree = "<group>"; };
@@ -51,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ECEF232B27C81DE9000ABC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECFAC8E427C13F1200BADB47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,10 +107,29 @@
 			path = "Announce Details";
 			sourceTree = "<group>";
 		};
+		ECEF232F27C81DEA000ABC75 /* TestTechniqueLeboncoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF233A27C82ABA000ABC75 /* Mock */,
+				ECEF233027C81DEA000ABC75 /* TestTechniqueLeboncoinTests.swift */,
+			);
+			path = TestTechniqueLeboncoinTests;
+			sourceTree = "<group>";
+		};
+		ECEF233A27C82ABA000ABC75 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF233B27C82B63000ABC75 /* MockNetworkService.swift */,
+				ECEF233D27C82C6F000ABC75 /* MockData.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		ECFAC8DE27C13F1200BADB47 = {
 			isa = PBXGroup;
 			children = (
 				ECFAC8E927C13F1200BADB47 /* TestTechniqueLeboncoin */,
+				ECEF232F27C81DEA000ABC75 /* TestTechniqueLeboncoinTests */,
 				ECFAC8E827C13F1200BADB47 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				ECFAC8E727C13F1200BADB47 /* TestTechniqueLeboncoin.app */,
+				ECEF232E27C81DE9000ABC75 /* TestTechniqueLeboncoinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +155,8 @@
 				ECFAC8EC27C13F1200BADB47 /* SceneDelegate.swift */,
 				ECFAC8F327C13F1500BADB47 /* Assets.xcassets */,
 				ECFAC8F527C13F1500BADB47 /* LaunchScreen.storyboard */,
+				ECEF233F27C83028000ABC75 /* announces.json */,
+				ECEF234227C832FB000ABC75 /* categories.json */,
 				ECFAC8F827C13F1500BADB47 /* Info.plist */,
 			);
 			path = TestTechniqueLeboncoin;
@@ -116,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				ECFAC8FF27C1570500BADB47 /* Announce.swift */,
-				ECFAC90127C1599000BADB47 /* Category.swift */,
+				ECFAC90127C1599000BADB47 /* AnnounceCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +220,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ECEF232D27C81DE9000ABC75 /* TestTechniqueLeboncoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECEF233627C81DEA000ABC75 /* Build configuration list for PBXNativeTarget "TestTechniqueLeboncoinTests" */;
+			buildPhases = (
+				ECEF232A27C81DE9000ABC75 /* Sources */,
+				ECEF232B27C81DE9000ABC75 /* Frameworks */,
+				ECEF232C27C81DE9000ABC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECEF233327C81DEA000ABC75 /* PBXTargetDependency */,
+			);
+			name = TestTechniqueLeboncoinTests;
+			productName = TestTechniqueLeboncoinTests;
+			productReference = ECEF232E27C81DE9000ABC75 /* TestTechniqueLeboncoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ECFAC8E627C13F1200BADB47 /* TestTechniqueLeboncoin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECFAC8FB27C13F1500BADB47 /* Build configuration list for PBXNativeTarget "TestTechniqueLeboncoin" */;
@@ -197,6 +265,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					ECEF232D27C81DE9000ABC75 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = ECFAC8E627C13F1200BADB47;
+					};
 					ECFAC8E627C13F1200BADB47 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -216,18 +288,28 @@
 			projectRoot = "";
 			targets = (
 				ECFAC8E627C13F1200BADB47 /* TestTechniqueLeboncoin */,
+				ECEF232D27C81DE9000ABC75 /* TestTechniqueLeboncoinTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ECEF232C27C81DE9000ABC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECFAC8E527C13F1200BADB47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECFAC8F727C13F1500BADB47 /* LaunchScreen.storyboard in Resources */,
+				ECEF234327C832FB000ABC75 /* categories.json in Resources */,
 				ECFAC91227C434D200BADB47 /* AnnounceCollectionViewCell.xib in Resources */,
 				ECFAC8F427C13F1500BADB47 /* Assets.xcassets in Resources */,
+				ECEF234127C8325D000ABC75 /* announces.json in Resources */,
 				ECFAC8F227C13F1200BADB47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,12 +317,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ECEF232A27C81DE9000ABC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECEF233C27C82B63000ABC75 /* MockNetworkService.swift in Sources */,
+				ECEF233E27C82C6F000ABC75 /* MockData.swift in Sources */,
+				ECEF233127C81DEA000ABC75 /* TestTechniqueLeboncoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECFAC8E327C13F1200BADB47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECFAC90027C1570500BADB47 /* Announce.swift in Sources */,
-				ECFAC90227C1599000BADB47 /* Category.swift in Sources */,
+				ECFAC90227C1599000BADB47 /* AnnounceCategory.swift in Sources */,
 				ECFAC91127C434D200BADB47 /* AnnounceCollectionViewCell.swift in Sources */,
 				ECEF232827C6C95C000ABC75 /* AnnounceViewController.swift in Sources */,
 				ECEF232027C5743B000ABC75 /* CategoryViewModel.swift in Sources */,
@@ -257,6 +349,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECEF233327C81DEA000ABC75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECFAC8E627C13F1200BADB47 /* TestTechniqueLeboncoin */;
+			targetProxy = ECEF233227C81DEA000ABC75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ECFAC8F027C13F1200BADB47 /* Main.storyboard */ = {
@@ -278,6 +378,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ECEF233427C81DEA000ABC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LVECUMKDR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.gustavoserra.TestTechniqueLeboncoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTechniqueLeboncoin.app/TestTechniqueLeboncoin";
+			};
+			name = Debug;
+		};
+		ECEF233527C81DEA000ABC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LVECUMKDR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.gustavoserra.TestTechniqueLeboncoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTechniqueLeboncoin.app/TestTechniqueLeboncoin";
+			};
+			name = Release;
+		};
 		ECFAC8F927C13F1500BADB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -457,6 +593,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ECEF233627C81DEA000ABC75 /* Build configuration list for PBXNativeTarget "TestTechniqueLeboncoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECEF233427C81DEA000ABC75 /* Debug */,
+				ECEF233527C81DEA000ABC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECFAC8E227C13F1200BADB47 /* Build configuration list for PBXProject "TestTechniqueLeboncoin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NetworkServiceProtocol {
+    func load<T>(resource: Resource<T>, completion: @escaping (Result<T?,NetworkError>) -> ())
+}
+
 enum NetworkError: Error {
     case RequestError
     case URLError
@@ -18,7 +22,7 @@ struct Resource<T> {
     let parse: (Data) -> T?
 }
 
-final class NetworkService {
+final class NetworkService: NetworkServiceProtocol {
     
     let defaultSession = URLSession(configuration: .default)
     

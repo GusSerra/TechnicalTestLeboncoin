@@ -13,19 +13,25 @@ protocol AnnounceListDelegate: AnyObject {
 
 class AnnounceListViewModel {
     
+    let networkService: NetworkServiceProtocol?
+    
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
+    }
+    
     private var announces: [Announce] = [] {
         didSet {
             self.fetchCategories()
         }
     }
     
-    var categories: [Category] = [] {
+    var categories: [AnnounceCategory] = [] {
         didSet {
             self.delegate?.announcesConfigDidFetch(self)
         }
     }
     
-    var filteredCategory: Category?
+    var filteredCategory: AnnounceCategory?
     
     var announcesConfiguration: [AnnounceViewModel] {
         announces
@@ -59,7 +65,7 @@ class AnnounceListViewModel {
             return try? JSONDecoder().decode([Announce].self, from: data)
         }
         
-        NetworkService().load(resource: resource) { [weak self] result in
+        networkService?.load(resource: resource) { [weak self] result in
             
             switch result {
                 case .failure(let error):
@@ -74,12 +80,12 @@ class AnnounceListViewModel {
     
     private func fetchCategories() {
         
-        let resource = Resource<[Category]>(baseUrl: "https://raw.githubusercontent.com/leboncoin/paperclip/master/categories.json") { data in
+        let resource = Resource<[AnnounceCategory]>(baseUrl: "https://raw.githubusercontent.com/leboncoin/paperclip/master/categories.json") { data in
             
-            return try? JSONDecoder().decode([Category].self, from: data)
+            return try? JSONDecoder().decode([AnnounceCategory].self, from: data)
         }
         
-        NetworkService().load(resource: resource) { [weak self] result in
+        networkService?.load(resource: resource) { [weak self] result in
             
             switch result {
                 case .failure(let error):

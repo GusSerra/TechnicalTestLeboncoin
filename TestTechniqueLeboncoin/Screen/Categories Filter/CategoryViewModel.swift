@@ -11,7 +11,7 @@ struct CategoryViewModel {
     let id: Int64
     let name: String
     
-    init(category: Category) {
+    init(category: AnnounceCategory) {
         self.id = category.id
         self.name = category.name
     }

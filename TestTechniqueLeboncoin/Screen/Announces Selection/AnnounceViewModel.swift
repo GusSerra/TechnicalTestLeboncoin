@@ -15,7 +15,7 @@ enum UrgentAnnounce {
 struct AnnounceViewModel {
     let id: Int
     let title: String
-    let category: Category
+    let category: AnnounceCategory
     let creationDate: Date?
     let description: String
     let urgency: UrgentAnnounce
@@ -24,7 +24,7 @@ struct AnnounceViewModel {
     let price: Double
     let siret: String?
     
-    init(announce: Announce, category: Category) {
+    init(announce: Announce, category: AnnounceCategory) {
         self.id = announce.id
         self.title = announce.title
         self.category = category
